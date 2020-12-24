@@ -7,6 +7,7 @@ class Pokegame extends Component {
             { id: 7, name: 'Squirtle', type: 'water', exp: 63 },
             { id: 11, name: 'Metapod', type: 'bug', exp: 72 },
             { id: 12, name: 'Butterfree', type: 'flying', exp: 178 },
+
             { id: 25, name: 'Pikachu', type: 'electric', exp: 112 },
             { id: 39, name: 'Jigglypuff', type: 'normal', exp: 95 },
             { id: 94, name: 'Gengar', type: 'poison', exp: 225 },
@@ -27,8 +28,6 @@ class Pokegame extends Component {
         let exp2 = hand2.reduce((exp, pokemon) => exp + pokemon.exp, 0)
         return (
             <div>
-                <h1>Pokegame</h1>
-
                 <Pokedex pokemon={hand1} exp={exp1} isWinner={exp1 > exp2} />
                 <Pokedex pokemon={hand2} exp={exp2} isWinner={exp2 > exp1} />
             </div>
